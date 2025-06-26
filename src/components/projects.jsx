@@ -28,7 +28,7 @@ function Projects() {
           <CardContent className="overflow-hidden">
             <img
               className="w-full h-48 scale-150 object-cover"
-              src="src\assets\21d99311-eb75-48ee-a78d-10a83beb91bb.png"
+              src="\assets\21d99311-eb75-48ee-a78d-10a83beb91bb.png"
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between">
@@ -36,7 +36,7 @@ function Projects() {
               <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-4 object-contain"
-                  src="src\assets\enlace.png"
+                  src="\assets\enlace.png"
                 ></img>
                 Preview
               </Button>
@@ -48,7 +48,7 @@ function Projects() {
               <Button className="w-24 p-5 text-black text-md overflow-hidden font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-6 rounded-full object-contain"
-                  src="src/assets/icons8-github-96.png"
+                  src="/assets/icons8-github-96.png"
                 ></img>
                 Code
               </Button>
@@ -65,7 +65,7 @@ function Projects() {
           <CardContent className="overflow-hidden">
             <img
               className="w-full h-48 scale-135 object-cover"
-              src="src\assets\Captura de pantalla 2025-06-25 190334.png"
+              src="\assets\Captura de pantalla 2025-06-25 190334.png"
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between">
@@ -76,7 +76,7 @@ function Projects() {
               <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
               <img
                   className="w-4 object-contain"
-                  src="src\assets\enlace.png"
+                  src="\assets\enlace.png"
                 ></img>
                 Preview
               </Button>
@@ -88,7 +88,7 @@ function Projects() {
               <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
               <img
                   className="w-6 rounded-full object-contain"
-                  src="src/assets/icons8-github-96.png"
+                  src="/assets/icons8-github-96.png"
                 ></img>
                 Code
               </Button>
@@ -109,7 +109,7 @@ function Projects() {
           <CardContent className="overflow-hidden">
             <img
               className="w-full h-48 scale-135 object-cover"
-              src="src\assets\Captura de pantalla 2023-09-03 003015.png"
+              src="\assets\Captura de pantalla 2023-09-03 003015.png"
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between">
@@ -120,7 +120,7 @@ function Projects() {
               <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-4 object-contain"
-                  src="src\assets\enlace.png"
+                  src="\assets\enlace.png"
                 ></img>
                 Preview
               </Button>
@@ -132,7 +132,7 @@ function Projects() {
               <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-6 rounded-full object-contain"
-                  src="src/assets/icons8-github-96.png"
+                  src="/assets/icons8-github-96.png"
                 ></img>
                 Code
               </Button>
@@ -150,7 +150,7 @@ function Projects() {
           <CardContent className="overflow-hidden">
             <img
               className="w-full h-48 scale-135 object-cover"
-              src="src\assets\Captura de pantalla 2025-05-26 134321.png"
+              src="\assets\Captura de pantalla 2025-05-26 134321.png"
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between items-end">
@@ -161,7 +161,7 @@ function Projects() {
               <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-4 object-contain"
-                  src="src\assets\enlace.png"
+                  src="\assets\enlace.png"
                 ></img>
                 Preview
               </Button>
@@ -173,7 +173,7 @@ function Projects() {
               <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-6 rounded-full object-contain"
-                  src="src/assets/icons8-github-96.png"
+                  src="/assets/icons8-github-96.png"
                 ></img>
                 Code
               </Button>
@@ -198,7 +198,7 @@ function Projects() {
             <div className="flex flex-col items-center  gap-2">
               <img
                 className="w-16 rounded-full"
-                src="src\assets\icons8-github-96.png"
+                src="\assets\icons8-github-96.png"
                 alt=""
               />
               Visitar GitHub
@@ -219,7 +219,7 @@ function Projects() {
           <CardContent className="overflow-hidden">
             <img
               className="w-full h-48  object-cover"
-              src="src/assets/Captura de pantalla 2023-10-24 182556.png"
+              src="/assets/Captura de pantalla 2023-10-24 182556.png"
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between">
@@ -227,7 +227,7 @@ function Projects() {
               <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-4 object-contain"
-                  src="src\assets\enlace.png"
+                  src="\assets\enlace.png"
                 ></img>
                 Preview
               </Button>
@@ -236,7 +236,7 @@ function Projects() {
               <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-6 rounded-full object-contain"
-                  src="src/assets/icons8-github-96.png"
+                  src="/assets/icons8-github-96.png"
                 ></img>
                 Code
               </Button>

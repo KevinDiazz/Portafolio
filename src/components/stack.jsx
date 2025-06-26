@@ -43,7 +43,7 @@ function Stack() {
               >
                 <motion.img
                   className="w-10"
-                  src="src/assets/react.svg"
+                  src="/assets/react.svg"
                   initial={{ scale: 0, rotate: -45, opacity: 0 }}
                   animate={{ scale: 1, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
@@ -66,7 +66,7 @@ function Stack() {
               >
                 <motion.img
                   className="w-10"
-                  src="src/assets/javascript-logo-svgrepo-com.svg"
+                  src="/assets/javascript-logo-svgrepo-com.svg"
                   initial={{ scale: 0, rotate: 0, opacity: 0 }}
                   animate={{ scale: 1, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
@@ -89,7 +89,7 @@ function Stack() {
               >
                 <motion.img
                   className="w-10"
-                  src="src/assets/html-svgrepo-com.svg"
+                  src="/assets/html-svgrepo-com.svg"
                   initial={{ scale: 0, rotate: 0, opacity: 0 }}
                   animate={{ scale: 1, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
@@ -112,7 +112,7 @@ function Stack() {
               >
                 <motion.img
                   className="w-10"
-                  src="src/assets/css3-logo-svgrepo-com.svg"
+                  src="/assets/css3-logo-svgrepo-com.svg"
                   initial={{ scale: 0, rotate: 0, opacity: 0 }}
                   animate={{ scale: 1, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
@@ -135,7 +135,7 @@ function Stack() {
               >
                 <motion.img
                   className="w-10"
-                  src="src/assets/tailwind-svgrepo-com.svg"
+                  src="/assets/tailwind-svgrepo-com.svg"
                   initial={{ scale: 0, rotate: 0, opacity: 0 }}
                   animate={{ scale: 1, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
@@ -163,7 +163,7 @@ function Stack() {
                     <li className="flex gap-2 mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Uso avanzado de hooks (useState, useEffect,
@@ -173,21 +173,21 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Gestión de estado con Redux y Context API</span>
                     </li>
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Manejo de rutas con React Router</span>
                     </li>
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Testing con Vitest y React Testing Library</span>
                     </li>
@@ -217,7 +217,7 @@ function Stack() {
                     <li className="flex gap-2 mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Dominio de ES6+ (arrow functions, destructuring,
@@ -227,21 +227,21 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Manipulación avanzada del DOM y eventos</span>
                     </li>
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Programación orientada a objetos y funcional</span>
                     </li>
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Consumo y manejo de APIs REST</span>
                     </li>
@@ -270,7 +270,7 @@ function Stack() {
                     <li className="flex gap-2 mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Uso correcto de etiquetas semánticas para mejorar
@@ -280,7 +280,7 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Estructuración limpia y organizada del contenido
@@ -289,7 +289,7 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Implementación de formularios accesibles y validación
@@ -299,7 +299,7 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Integración con CSS y JavaScript para interfaces
@@ -331,7 +331,7 @@ function Stack() {
                     <li className="flex gap-2 mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Uso avanzado de Flexbox y Grid para layouts modernos y
@@ -341,21 +341,21 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Diseño responsivo</span>
                     </li>
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>Manejo de preprocesadores como SASS</span>
                     </li>
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Domino transiciones y animaciones en CSS para crear
@@ -387,7 +387,7 @@ function Stack() {
                     <li className="flex gap-2 mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Diseño basado en utilidades que agilizan el desarrollo
@@ -396,7 +396,7 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Creación de layouts flexibles con clases de Flexbox y
@@ -406,7 +406,7 @@ function Stack() {
                     <li className="flex gap-2  mb-1">
                       <img
                         className="w-5 object-contain"
-                        src="src/assets/icons8-punto-central-50.png"
+                        src="/assets/icons8-punto-central-50.png"
                       />
                       <span>
                         Personalización fácil mediante configuración y plugins
@@ -421,7 +421,7 @@ function Stack() {
         <div className="w-1/1 flex justify-center  lg:w-1/2 lg:justify-end">
           <motion.img
             className="p-2 w-md object-contain"
-            src="src\assets\Untitled design (2) (1).png"
+            src="\assets\Untitled design (2) (1).png"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 1, type: "tween" }}

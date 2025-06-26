@@ -1,3 +1,4 @@
+
 function Contacto() {
   return (
     <>
@@ -14,7 +15,7 @@ function Contacto() {
           <div className="flex flex-col items-center justify-end h-full">
             <img
               className="w-15 h-20 object-contain transition duration-300 hover:opacity-65"
-              src="src\assets\icons8-linkedin-96.png"
+              src="\assets\icons8-linkedin-96.png"
               alt="github-logo"
             />
             <p className="text-black text-sm text-center font-medium font-lora">
@@ -30,7 +31,7 @@ function Contacto() {
           >
             <img
               className="w-12 h-20 object-contain transition duration-300 hover:opacity-65"
-              src="src\assets\gmail.png"
+              src="\assets\gmail.png"
               alt="gmail-logo"
             />
 
