@@ -14,6 +14,56 @@ function Projects() {
         PROYECTOS
       </p>
       <div className="mt-4 ml-4 flex flex-wrap gap-8 md:justify-evenly justify-center ">
+         <Card className="w-80 flex justify-between order-6 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
+  <CardHeader>
+    <CardTitle className="font-manrope">La Pizzería</CardTitle>
+    <CardDescription className="h-32 font-lora overflow-hidden">
+      🍕 Mi primer proyecto Full Stack: una aplicación web interactiva que
+      simula una pizzería. Personaliza pizzas visualmente, agrégalas a una lista
+      y explora un backend con endpoints CRUD en Node.js.
+    </CardDescription>
+  </CardHeader>
+
+  <CardContent className="overflow-hidden">
+    <img
+      className="w-full h-48 scale-135 object-cover"
+      src="/assets/Captura de pantalla 2025-07-24 001919.png"
+      alt="Vista previa del proyecto La Pizzería"
+    />
+  </CardContent>
+
+  <CardFooter className="flex gap-2 justify-between items-end">
+    <a
+      href="https://lnkd.in/dP22V7Hk"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+        <img
+          className="w-4 object-contain"
+          src="/assets/enlace.png"
+          alt="Icono de enlace"
+        />
+        Demo
+      </Button>
+    </a>
+
+    <a
+      href="https://github.com/KevinDiazz/La-Pizzeria"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+        <img
+          className="w-6 rounded-full object-contain"
+          src="/assets/icons8-github-96.png"
+          alt="Icono de GitHub"
+        />
+        Code
+      </Button>
+    </a>
+  </CardFooter>
+</Card>
         <Card className="w-80 flex justify-between order-1 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="font-manrope">
@@ -139,56 +189,6 @@ function Projects() {
             </a>
           </CardFooter>
         </Card>
-       <Card className="w-80 flex justify-between order-6 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-  <CardHeader>
-    <CardTitle className="font-manrope">La Pizzería</CardTitle>
-    <CardDescription className="h-32 font-lora overflow-hidden">
-      🍕 Mi primer proyecto Full Stack: una aplicación web interactiva que
-      simula una pizzería. Personaliza pizzas visualmente, agrégalas a una lista
-      y explora un backend con endpoints CRUD en Node.js.
-    </CardDescription>
-  </CardHeader>
-
-  <CardContent className="overflow-hidden">
-    <img
-      className="w-full h-48 scale-135 object-cover"
-      src="/assets/Captura de pantalla 2025-07-24 001919.png"
-      alt="Vista previa del proyecto La Pizzería"
-    />
-  </CardContent>
-
-  <CardFooter className="flex gap-2 justify-between items-end">
-    <a
-      href="https://lnkd.in/dP22V7Hk"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-        <img
-          className="w-4 object-contain"
-          src="/assets/enlace.png"
-          alt="Icono de enlace"
-        />
-        Demo
-      </Button>
-    </a>
-
-    <a
-      href="https://github.com/KevinDiazz/La-Pizzeria"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-        <img
-          className="w-6 rounded-full object-contain"
-          src="/assets/icons8-github-96.png"
-          alt="Icono de GitHub"
-        />
-        Code
-      </Button>
-    </a>
-  </CardFooter>
-</Card>
         <div className="w-80 flex flex-col gap-3 justify-center order-6 md:order-5 bg-[#fff8f2]">
           <h2 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-start ml-7 lg:text-5xl font-manrope text-[#fea564]">
             ¿QUIERES<br></br> <span className="ml-20 text-[#de495a]">VER</span>
