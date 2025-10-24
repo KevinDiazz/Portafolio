@@ -214,44 +214,57 @@ function Projects() {
             </div>
           </a>
         </div>
-        <Card className="w-80 flex font-lora justify-between order-4 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-          <CardHeader>
-            <CardTitle className="font-manrope">
-              Web restaurante + sistema reservas
-            </CardTitle>
-            <CardDescription>
-              Este proyecto es una aplicación web construida con React para
-              gestionar reservas de mesas en el restaurante. La aplicación es
-              responsiva y utiliza diferentes características de React
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="overflow-hidden">
-            <img
-              className="w-full h-48  object-cover"
-              src="/assets/Captura de pantalla 2023-10-24 182556.png"
-            ></img>
-          </CardContent>
-          <CardFooter className="flex gap-2 justify-between">
-            <a href="https://litle-lemon-amber.vercel.app/" target="_blank">
-              <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-4 object-contain"
-                  src="\assets\enlace.png"
-                ></img>
-                Preview
-              </Button>
-            </a>
-            <a href="https://github.com/KevinDiazz/LitleLemon" target="_blank">
-              <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-6 rounded-full object-contain"
-                  src="/assets/icons8-github-96.png"
-                ></img>
-                Code
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
+       <Card className="w-80 flex justify-between order-7 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
+  <CardHeader>
+    <CardTitle className="font-manrope">Own Route</CardTitle>
+    <CardDescription className="h-28 font-lora overflow-hidden">
+      🌍 Sitio web de afiliados creado con WordPress. Personalizado con el tema
+      Astra, HTML y CSS propios, y optimizado con Rank Math SEO. Incluye posts,
+      slugs y estructura de blog completa.
+    </CardDescription>
+  </CardHeader>
+
+  <CardContent className="overflow-hidden">
+    <img
+      className="w-full h-48 scale-135 object-cover"
+      src="/assets/Captura de pantalla 2025-10-24 120136.png"
+      alt="Vista previa del proyecto Own Route"
+    />
+  </CardContent>
+
+  <CardFooter className="flex gap-2 justify-between items-end">
+    <a
+      href="https://ownroute.com" 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+        <img
+          className="w-4 object-contain"
+          src="/assets/enlace.png"
+          alt="Icono de enlace"
+        />
+        Demo
+      </Button>
+    </a>
+
+    <a
+      href="https://ownroute.life/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+        <img
+          className="w-6 rounded-full object-contain"
+          src="/assets/icons8-github-96.png"
+          alt="Icono de GitHub"
+        />
+        Code
+      </Button>
+    </a>
+  </CardFooter>
+</Card>
+
       </div>
     </section>
   );
