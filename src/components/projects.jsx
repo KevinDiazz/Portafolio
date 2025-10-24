@@ -152,7 +152,7 @@ function Projects() {
   <CardContent className="overflow-hidden">
     <img
       className="w-full h-48 scale-135 object-cover"
-      src="/assets/lapizzeria-preview.png"
+      src="/assets/Captura de pantalla 2025-07-24 001919.png"
       alt="Vista previa del proyecto La Pizzería"
     />
   </CardContent>
