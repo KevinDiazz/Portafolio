@@ -14,7 +14,7 @@ function Projects() {
         PROYECTOS
       </p>
       <div className="mt-4 ml-4 flex flex-wrap gap-8 md:justify-evenly justify-center ">
-         <Card className="w-80 flex justify-between order-6 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
+         <Card className="w-80 flex justify-between order-4 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
   <CardHeader>
     <CardTitle className="font-manrope">La Pizzería</CardTitle>
     <CardDescription className="h-32 font-lora overflow-hidden">
@@ -218,7 +218,7 @@ function Projects() {
   <CardHeader>
     <CardTitle className="font-manrope">Own Route</CardTitle>
     <CardDescription className="h-28 font-lora overflow-hidden">
-      🌍 Sitio web de afiliados creado con WordPress. Personalizado con el tema
+      Sitio web de afiliados creado con WordPress. Personalizado con el tema
       Astra, HTML y CSS propios, y optimizado con Rank Math SEO. Incluye posts,
       slugs y estructura de blog completa.
     </CardDescription>
@@ -234,7 +234,7 @@ function Projects() {
 
   <CardFooter className="flex gap-2 justify-between items-end">
     <a
-      href="https://ownroute.com" 
+      href="https://ownroute.life" 
       target="_blank"
       rel="noopener noreferrer"
     >
