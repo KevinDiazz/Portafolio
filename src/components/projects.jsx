@@ -18,7 +18,7 @@ function Projects() {
   <CardHeader>
     <CardTitle className="font-manrope">La Pizzería</CardTitle>
     <CardDescription className="h-32 font-lora overflow-hidden">
-      🍕 Mi primer proyecto Full Stack: una aplicación web interactiva que
+       Aplicación web interactiva que
       simula una pizzería. Personaliza pizzas visualmente, agrégalas a una lista
       y explora un backend con endpoints CRUD en Node.js.
     </CardDescription>
