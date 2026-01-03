@@ -7,7 +7,7 @@ function AboutMe() {
         <Avatar className="w-24 h-24 aspect-square border-2 border-[#ff8e3c] bg-white">
           <AvatarImage
             className="object-contain w-full h-full"
-            src="public\assets\foto.png"
+            src="/assets/foto.png"
           />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
