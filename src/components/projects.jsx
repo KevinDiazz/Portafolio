@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 function Projects() {
   return (
     <section id="proyectos">
@@ -14,56 +15,59 @@ function Projects() {
         PROYECTOS
       </p>
       <div className="mt-4 ml-4 flex flex-wrap gap-8 md:justify-evenly justify-center ">
-         <Card className="w-80 flex justify-between order-4 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-  <CardHeader>
-    <CardTitle className="font-manrope">La Pizzería</CardTitle>
-    <CardDescription className="h-32 font-lora overflow-hidden">
-       Aplicación web interactiva que
-      simula una pizzería. Personaliza pizzas visualmente, agrégalas a una lista
-      y explora un backend con endpoints CRUD en Node.js.
-    </CardDescription>
-  </CardHeader>
+        <Card className="w-80 flex justify-between order-4 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
+          <CardHeader>
+            <CardTitle className="font-manrope">La Pizzería</CardTitle>
+            <CardDescription className="h-auto font-lora overflow-hidden">
+             Aplicación web desarrollada para simular una pizzería, con personalización de productos en el frontend y comunicación con un backend en Node.js mediante endpoints CRUD, enfocada en la gestión dinámica de pedidos.
+            </CardDescription>
+            <div className="flex w-full flex-wrap gap-2">
+        <Badge className="bg-white text-[#fea564] ">React</Badge>
+        <Badge className="bg-white text-[#fea564] ">Node</Badge>
+        <Badge className="bg-white text-[#fea564] ">Express</Badge>
+      </div>
+          </CardHeader>
 
-  <CardContent className="overflow-hidden">
-    <img
-      className="w-full h-48 scale-135 object-cover"
-      src="/assets/Captura de pantalla 2025-07-24 001919.png"
-      alt="Vista previa del proyecto La Pizzería"
-    />
-  </CardContent>
+          <CardContent className="overflow-hidden">
+            <img
+              className="w-full h-48 scale-135 object-cover"
+              src="/assets/Captura de pantalla 2025-07-24 001919.png"
+              alt="Vista previa del proyecto La Pizzería"
+            />
+          </CardContent>
 
-  <CardFooter className="flex gap-2 justify-between items-end">
-    <a
-      href="https://lnkd.in/dP22V7Hk"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-        <img
-          className="w-4 object-contain"
-          src="/assets/enlace.png"
-          alt="Icono de enlace"
-        />
-        Demo
-      </Button>
-    </a>
+          <CardFooter className="flex gap-2 justify-between items-end">
+            <a
+              href="https://lnkd.in/dP22V7Hk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+                <img
+                  className="w-4 object-contain"
+                  src="/assets/enlace.png"
+                  alt="Icono de enlace"
+                />
+                Ver sitio
+              </Button>
+            </a>
 
-    <a
-      href="https://github.com/KevinDiazz/La-Pizzeria"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-        <img
-          className="w-6 rounded-full object-contain"
-          src="/assets/icons8-github-96.png"
-          alt="Icono de GitHub"
-        />
-        Code
-      </Button>
-    </a>
-  </CardFooter>
-</Card>
+            <a
+              href="https://github.com/KevinDiazz/La-Pizzeria"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+                <img
+                  className="w-6 rounded-full object-contain"
+                  src="/assets/icons8-github-96.png"
+                  alt="Icono de GitHub"
+                />
+                Docs
+              </Button>
+            </a>
+          </CardFooter>
+        </Card>
         <Card className="w-80 flex justify-between order-1 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="font-manrope">
@@ -74,6 +78,10 @@ function Projects() {
               ayudar a los usuarios a identificar y comprender mejor sus
               emociones.
             </CardDescription>
+            <div className="flex w-full flex-wrap gap-2">
+        <Badge className="bg-white text-[#fea564] ">React</Badge>
+        <Badge className="bg-white text-[#fea564] ">D3.js</Badge>
+      </div>
           </CardHeader>
           <CardContent className="overflow-hidden">
             <img
@@ -88,7 +96,7 @@ function Projects() {
                   className="w-4 object-contain"
                   src="\assets\enlace.png"
                 ></img>
-                Preview
+                Ver sitio
               </Button>
             </a>
             <a
@@ -100,17 +108,22 @@ function Projects() {
                   className="w-6 rounded-full object-contain"
                   src="/assets/icons8-github-96.png"
                 ></img>
-                Code
+                Docs
               </Button>
             </a>
           </CardFooter>
         </Card>
-         <Card className="w-80 flex justify-between order-2 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
+        <Card className="w-80 flex justify-between order-2 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="font-manrope">Web Videojuegos</CardTitle>
             <CardDescription className="h-20 font-lora">
-              Aplicación web de videojuegos desarrollada con React y la API de RAWG, que permite explorar, filtrar y gestionar juegos favoritos.
+              Aplicación web de videojuegos desarrollada con React y la API de
+              RAWG, que permite explorar, filtrar y gestionar juegos favoritos.
             </CardDescription>
+              <div className="flex w-full flex-wrap gap-2">
+        <Badge className="bg-white text-[#fea564] ">React</Badge>
+        <Badge className="bg-white text-[#fea564] ">API</Badge>
+      </div>
           </CardHeader>
           <CardContent className="overflow-hidden">
             <img
@@ -119,28 +132,22 @@ function Projects() {
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between">
-            <a
-              href="https://ggames-psi.vercel.app/"
-              target="_blank"
-            >
+            <a href="https://ggames-psi.vercel.app/" target="_blank">
               <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-              <img
+                <img
                   className="w-4 object-contain"
                   src="\assets\enlace.png"
                 ></img>
-                Preview
+                Ver sitio
               </Button>
             </a>
-            <a
-              href="https://github.com/KevinDiazz/ggames"
-              target="_blank"
-            >
+            <a href="https://github.com/KevinDiazz/ggames" target="_blank">
               <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-              <img
+                <img
                   className="w-6 rounded-full object-contain"
                   src="/assets/icons8-github-96.png"
                 ></img>
-                Code
+                Docs
               </Button>
             </a>
           </CardFooter>
@@ -148,23 +155,24 @@ function Projects() {
         <Card className="w-80 flex justify-between order-3 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="font-manrope">
-              Registro de Datos + PDF
+              Web Hotel
             </CardTitle>
             <CardDescription className="h-20 font-lora">
-              Software enfocado para llevar un registro de la recolección de
-              frutas, registra información a traves de un formulario y genera un
-              archivo PDF con los datos.
+             Sitio web interactivo de hotel que incluye sistema de filtrado de servicios y carrito de selección, facilitando la exploración y gestión de servicios de forma intuitiva.
             </CardDescription>
+              <div className="flex w-full flex-wrap gap-2">
+        <Badge className="bg-white text-[#fea564] ">React</Badge>
+      </div>
           </CardHeader>
           <CardContent className="overflow-hidden">
             <img
               className="w-full h-48 scale-135 object-cover"
-              src="\assets\Captura de pantalla 2023-09-03 003015.png"
+              src="public\assets\Captura de pantalla 2026-01-03 151754.png"
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between">
             <a
-              href="https://registrador-de-datos-bjebnubuu-kevin-diazs-projects-0a2b1ac2.vercel.app/"
+              href="https://web-hotel-seven.vercel.app/"
               target="_blank"
             >
               <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
@@ -172,7 +180,7 @@ function Projects() {
                   className="w-4 object-contain"
                   src="\assets\enlace.png"
                 ></img>
-                Preview
+                Ver sitio
               </Button>
             </a>
             <a
@@ -184,12 +192,12 @@ function Projects() {
                   className="w-6 rounded-full object-contain"
                   src="/assets/icons8-github-96.png"
                 ></img>
-                Code
+                Docs
               </Button>
             </a>
           </CardFooter>
         </Card>
-        <div className="w-80 flex flex-col gap-3 justify-center order-6 md:order-5 bg-[#fff8f2]">
+        <div className="w-80 flex flex-col gap-3 justify-center order-7 md:order-5 bg-[#fff8f2]">
           <h2 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-start ml-7 lg:text-5xl font-manrope text-[#fea564]">
             ¿QUIERES<br></br> <span className="ml-20 text-[#de495a]">VER</span>
             <br></br>
@@ -214,57 +222,61 @@ function Projects() {
             </div>
           </a>
         </div>
-       <Card className="w-80 flex justify-between order-7 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-  <CardHeader>
-    <CardTitle className="font-manrope">Own Route</CardTitle>
-    <CardDescription className="h-28 font-lora overflow-hidden">
-      Sitio web de afiliados creado con WordPress. Personalizado con el tema
-      Astra, HTML y CSS propios, y optimizado con Rank Math SEO. Incluye posts,
-      slugs y estructura de blog completa.
-    </CardDescription>
-  </CardHeader>
+        <Card className="w-80 flex justify-between order-6 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
+          <CardHeader>
+            <CardTitle className="font-manrope">GCleaning Services</CardTitle>
+            <CardDescription className="h-28 font-lora overflow-hidden">
+              Sitio web corporativo desarrollado en WordPress para una empresa
+              de limpieza. Construido sobre el tema Astra, adaptada mediante
+              ajustes de diseño y Optimizado para SEO local.
+            </CardDescription>
+                    <div className="flex flex-col items-center gap-2">
+      <div className="flex w-full flex-wrap gap-2">
+        <Badge className="bg-white text-[#fea564]">WordPress</Badge>
+      </div>
+    </div>
+          </CardHeader>
 
-  <CardContent className="overflow-hidden">
-    <img
-      className="w-full h-48 scale-135 object-cover"
-      src="/assets/Captura de pantalla 2025-10-24 120136.png"
-      alt="Vista previa del proyecto Own Route"
-    />
-  </CardContent>
+          <CardContent className="overflow-hidden">
+            <img
+              className="w-full h-48 scale-135 object-cover object-top"
+              src="\assets\Captura de pantalla 2026-01-03 142843.png"
+              alt="Vista previa del proyecto Own Route"
+            />
+          </CardContent>
 
-  <CardFooter className="flex gap-2 justify-between items-end">
-    <a
-      href="https://ownroute.life" 
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-        <img
-          className="w-4 object-contain"
-          src="/assets/enlace.png"
-          alt="Icono de enlace"
-        />
-        Demo
-      </Button>
-    </a>
+          <CardFooter className="flex gap-2 justify-between items-end">
+            <a
+              href="https://gcleaning.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+                <img
+                  className="w-4 object-contain"
+                  src="/assets/enlace.png"
+                  alt="Icono de enlace"
+                />
+                Ver sitio
+              </Button>
+            </a>
 
-    <a
-      href="https://ownroute.life/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-        <img
-          className="w-6 rounded-full object-contain"
-          src="/assets/icons8-github-96.png"
-          alt="Icono de GitHub"
-        />
-        Code
-      </Button>
-    </a>
-  </CardFooter>
-</Card>
-
+            <a
+              href="https://ownroute.life/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
+                <img
+                  className="w-6 rounded-full object-contain"
+                  src="/assets/icons8-github-96.png"
+                  alt="Icono de GitHub"
+                />
+                Docs
+              </Button>
+            </a>
+          </CardFooter>
+        </Card>
       </div>
     </section>
   );
