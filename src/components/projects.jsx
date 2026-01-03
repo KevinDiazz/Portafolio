@@ -167,7 +167,7 @@ function Projects() {
           <CardContent className="overflow-hidden">
             <img
               className="w-full h-48 scale-135 object-cover"
-              src="public\assets\Captura de pantalla 2026-01-03 151754.png"
+              src="/assets/Captura de pantalla 2026-01-03 151754.png"
             ></img>
           </CardContent>
           <CardFooter className="flex gap-2 justify-between">
@@ -178,7 +178,7 @@ function Projects() {
               <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
                 <img
                   className="w-4 object-contain"
-                  src="\assets\enlace.png"
+                  src="/assets/enlace.png"
                 ></img>
                 Ver sitio
               </Button>
