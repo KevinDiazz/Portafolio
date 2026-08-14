@@ -1,282 +1,196 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-function Projects() {
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+
+const Dot = () => <span className="mt-2 block h-1 w-1 shrink-0 rounded-full bg-[#1e3a5f]" />;
+
+const PROJECTS = [
+  {
+    title: "PideON",
+    tagline: "Del cliente al repartidor: el ciclo completo de un pedido, en producción.",
+    description:
+      "Plataforma full-stack de pedidos para restaurantes que cubre los cuatro roles del flujo: cliente, cocina, repartidor y administrador.",
+    features: [
+      "Autenticación JWT con control de acceso por rol",
+      "Checkout con dirección de entrega a domicilio o recogida en tienda",
+      "Panel de cocina con transición de estado de pedidos en un click",
+      "Autoasignación atómica de repartos para evitar conflictos entre repartidores",
+      "Panel de admin con CRUD de categorías/productos y subida de imágenes a Cloudinary",
+      "Facturación simplificada descargable en PDF",
+      "Backend cubierto con tests de integración (Jest + Supertest)",
+    ],
+    badges: ["React", "Node.js", "Express", "Prisma", "PostgreSQL", "JWT", "Jest + Supertest"],
+    demo: "https://pideon.vercel.app",
+    repo: "https://github.com/KevinDiazz/pideon",
+    monogram: "PN",
+    image: "/assets/pideon.png",
+    featured: true,
+  },
+  {
+    title: "CanaryRoutes",
+    tagline: "Turismo por Canarias sin depender de Google Travel ni GetYourGuide.",
+    description:
+      "Plataforma editorial de turismo centrada exclusivamente en Canarias, con mapa interactivo y contenido optimizado para SEO.",
+    features: [
+      "Mapa interactivo con clustering y filtros por categoría",
+      "Más de 190 puntos de interés con datos enriquecidos (dificultad, duración, coordenadas)",
+      "Guías editoriales en tres idiomas (español, inglés, alemán)",
+      "Slugs localizados y hreflang para SEO multi-idioma",
+      "Integración de afiliados (GetYourGuide, DiscoverCars)",
+      "Consentimiento de cookies y cumplimiento GDPR",
+    ],
+    badges: ["Next.js 15", "TypeScript", "Tailwind", "Framer Motion"],
+    demo: "https://canary-routes.com",
+    repo: "https://github.com/KevinDiazz/canaryroutes",
+    monogram: "CR",
+    image: "/assets/canaryroutes.png",
+  },
+  {
+    title: "FootballScout",
+    tagline: "Ligas, equipos y jugadores en tiempo real con Angular moderno.",
+    description:
+      "Proyecto de aprendizaje que explora patrones avanzados de Angular 22 consumiendo la API pública de TheSportsDB.",
+    features: [
+      "Exploración de ligas, equipos y jugadores en tiempo real",
+      "Búsqueda en tiempo real de ligas y equipos",
+      "Favoritos persistentes con localStorage",
+      "Gestión de estado con Signals y arquitectura standalone",
+      "Orquestación de peticiones HTTP con forkJoin",
+      "Manejo de errores y estados de carga con reintento",
+    ],
+    badges: ["Angular 22", "TypeScript", "Vitest", "RxJS"],
+    demo: null,
+    repo: "https://github.com/KevinDiazz/footballScout",
+    monogram: "FS",
+    image: "/assets/footballScout.png",
+  },
+  {
+    title: "Angular CRM Comercial",
+    tagline: "CRUD de clientes y dashboard de métricas con formularios reactivos.",
+    description:
+      "CRM de aprendizaje con gestión completa de clientes y arquitectura basada en componentes reutilizables.",
+    features: [
+      "CRUD completo de clientes (crear, ver, editar, eliminar)",
+      "Dashboard con métricas: clientes totales, leads, contactos, propuestas y perdidos",
+      "Formularios reactivos con validación (email, DNI, teléfono)",
+      "Feedback visual en tiempo real ante cambios de estado",
+      "Comunicación entre componentes y reutilización de UI",
+    ],
+    badges: ["Angular", "TypeScript", "Vitest", "RxJS"],
+    demo: null,
+    repo: "https://github.com/KevinDiazz/angular-crm-comercial",
+    monogram: "CRM",
+    image: "/assets/angularCrm.png",
+  },
+];
+
+function ProjectCard({ project }) {
   return (
-    <section id="proyectos">
-      <p className="mb-5 mt-3 font-manrope font-extrabold tracking-tight text-[#2a3644] text-center text-5xl lg:ml-12 xl:text-start lg:text-center">
-        PROYECTOS
-      </p>
-      <div className="mt-4 ml-4 flex flex-wrap gap-8 md:justify-evenly justify-center ">
-        <Card className="w-80 flex justify-between order-4 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-          <CardHeader>
-            <CardTitle className="font-manrope">La Pizzería</CardTitle>
-            <CardDescription className="h-auto font-lora overflow-hidden">
-             Aplicación web desarrollada para simular una pizzería, con personalización de productos en el frontend y comunicación con un backend en Node.js mediante endpoints CRUD, enfocada en la gestión dinámica de pedidos.
-            </CardDescription>
-            <div className="flex w-full flex-wrap gap-2">
-        <Badge className="bg-white text-[#fea564] ">React</Badge>
-        <Badge className="bg-white text-[#fea564] ">Node</Badge>
-        <Badge className="bg-white text-[#fea564] ">Express</Badge>
+    <Card
+      className={`w-full max-w-5xl mx-auto flex-row flex-wrap md:flex-nowrap overflow-hidden bg-white rounded-sm border border-[#e2e0da] mb-8 py-0 gap-0
+        ${project.featured ? "border-t-2 border-t-[#1e3a5f]" : ""}`}
+    >
+      <div className="w-full md:w-2/5 min-h-48 flex items-center justify-center overflow-hidden bg-[#faf9f7] border-b md:border-b-0 md:border-r border-[#e2e0da]">
+        {project.image ? (
+          <img
+            className="w-full h-full min-h-48 object-cover"
+            src={project.image}
+            alt={`Captura del proyecto ${project.title}`}
+          />
+        ) : (
+          <span className="font-lora text-6xl text-[#1e3a5f]/30">{project.monogram}</span>
+        )}
       </div>
-          </CardHeader>
-
-          <CardContent className="overflow-hidden">
-            <img
-              className="w-full h-48 scale-135 object-cover"
-              src="/assets/Captura de pantalla 2025-07-24 001919.png"
-              alt="Vista previa del proyecto La Pizzería"
-            />
-          </CardContent>
-
-          <CardFooter className="flex gap-2 justify-between items-end">
+      <div className="flex-1 p-6 flex flex-col">
+        {project.featured && (
+          <span className="w-fit mb-2 font-manrope text-[11px] uppercase tracking-[0.15em] text-[#1e3a5f]">
+            Proyecto destacado
+          </span>
+        )}
+        <CardTitle className="font-lora text-2xl font-semibold text-[#1a1a1a]">
+          {project.title}
+        </CardTitle>
+        <p className="font-lora italic text-[#3f3f3f] mt-1">{project.tagline}</p>
+        <CardDescription className="font-lora mt-2 text-[#3f3f3f]">
+          {project.description}
+        </CardDescription>
+        <ul className="mt-3 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+          {project.features.map((feature) => (
+            <li key={feature} className="flex gap-2 font-lora text-sm text-[#3f3f3f]">
+              <Dot />
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="flex w-full flex-wrap gap-2 mt-4">
+          {project.badges.map((b) => (
+            <span
+              key={b}
+              className="rounded-sm border border-[#1e3a5f]/15 bg-[#e8eef4]/50 px-2 py-0.5 font-manrope text-[11px] text-[#1e3a5f]"
+            >
+              {b}
+            </span>
+          ))}
+        </div>
+        <div className="flex gap-3 mt-5">
+          {project.demo ? (
             <a
-              href="https://lnkd.in/dP22V7Hk"
+              href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center gap-1.5 rounded-sm bg-[#1a1a1a] px-5 py-2 font-manrope text-sm text-white transition hover:bg-[#1e3a5f]"
             >
-              <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-                <img
-                  className="w-4 object-contain"
-                  src="/assets/enlace.png"
-                  alt="Icono de enlace"
-                />
-                Ver sitio
-              </Button>
+              <ExternalLink size={14} />
+              Ver demo
             </a>
-
-            <a
-              href="https://github.com/KevinDiazz/La-Pizzeria"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-                <img
-                  className="w-6 rounded-full object-contain"
-                  src="/assets/icons8-github-96.png"
-                  alt="Icono de GitHub"
-                />
-                Docs
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
-        <Card className="w-80 flex justify-between order-1 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-          <CardHeader>
-            <CardTitle className="font-manrope">
-              Rueda de Emociones con D3.js
-            </CardTitle>
-            <CardDescription className="h-20 font-lora">
-              La Rueda de Emociones es un proyecto web interactivo diseñado para
-              ayudar a los usuarios a identificar y comprender mejor sus
-              emociones.
-            </CardDescription>
-            <div className="flex w-full flex-wrap gap-2">
-        <Badge className="bg-white text-[#fea564] ">React</Badge>
-        <Badge className="bg-white text-[#fea564] ">D3.js</Badge>
-      </div>
-          </CardHeader>
-          <CardContent className="overflow-hidden">
-            <img
-              className="w-full h-48 scale-150 object-cover"
-              src="\assets\21d99311-eb75-48ee-a78d-10a83beb91bb.png"
-            ></img>
-          </CardContent>
-          <CardFooter className="flex gap-2 justify-between">
-            <a href="https://rueda-de-emociones.vercel.app/" target="_blank">
-              <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-4 object-contain"
-                  src="\assets\enlace.png"
-                ></img>
-                Ver sitio
-              </Button>
-            </a>
-            <a
-              href="https://github.com/KevinDiazz/ruedaDeEmociones"
-              target="_blank"
-            >
-              <Button className="w-24 p-5 text-black text-md overflow-hidden font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-6 rounded-full object-contain"
-                  src="/assets/icons8-github-96.png"
-                ></img>
-                Docs
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
-        <Card className="w-80 flex justify-between order-2 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-          <CardHeader>
-            <CardTitle className="font-manrope">Web Videojuegos</CardTitle>
-            <CardDescription className="h-20 font-lora">
-              Aplicación web de videojuegos desarrollada con React y la API de
-              RAWG, que permite explorar, filtrar y gestionar juegos favoritos.
-            </CardDescription>
-              <div className="flex w-full flex-wrap gap-2">
-        <Badge className="bg-white text-[#fea564] ">React</Badge>
-        <Badge className="bg-white text-[#fea564] ">API</Badge>
-      </div>
-          </CardHeader>
-          <CardContent className="overflow-hidden">
-            <img
-              className="w-full h-48 scale-135 object-cover"
-              src="\assets\Captura de pantalla 2025-06-25 190334.png"
-            ></img>
-          </CardContent>
-          <CardFooter className="flex gap-2 justify-between">
-            <a href="https://ggames-psi.vercel.app/" target="_blank">
-              <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-4 object-contain"
-                  src="\assets\enlace.png"
-                ></img>
-                Ver sitio
-              </Button>
-            </a>
-            <a href="https://github.com/KevinDiazz/ggames" target="_blank">
-              <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-6 rounded-full object-contain"
-                  src="/assets/icons8-github-96.png"
-                ></img>
-                Docs
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
-        <Card className="w-80 flex justify-between order-3 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-          <CardHeader>
-            <CardTitle className="font-manrope">
-              Web Hotel
-            </CardTitle>
-            <CardDescription className="h-20 font-lora">
-             Sitio web interactivo de hotel que incluye sistema de filtrado de servicios y carrito de selección, facilitando la exploración y gestión de servicios de forma intuitiva.
-            </CardDescription>
-              <div className="flex w-full flex-wrap gap-2">
-        <Badge className="bg-white text-[#fea564] ">React</Badge>
-      </div>
-          </CardHeader>
-          <CardContent className="overflow-hidden">
-            <img
-              className="w-full h-48 scale-135 object-cover"
-              src="/assets/Captura de pantalla 2026-01-03 151754.png"
-            ></img>
-          </CardContent>
-          <CardFooter className="flex gap-2 justify-between">
-            <a
-              href="https://web-hotel-seven.vercel.app/"
-              target="_blank"
-            >
-              <Button className="font-lora  p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-4 object-contain"
-                  src="/assets/enlace.png"
-                ></img>
-                Ver sitio
-              </Button>
-            </a>
-            <a
-              href="https://github.com/KevinDiazz/RegistradorDeDatos"
-              target="_blank"
-            >
-              <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer">
-                <img
-                  className="w-6 rounded-full object-contain"
-                  src="/assets/icons8-github-96.png"
-                ></img>
-                Docs
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
-        <div className="w-80 flex flex-col gap-3 justify-center order-7 md:order-5 bg-[#fff8f2]">
-          <h2 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-start ml-7 lg:text-5xl font-manrope text-[#fea564]">
-            ¿QUIERES<br></br> <span className="ml-20 text-[#de495a]">VER</span>
-            <br></br>
-            <span className="ml-30 text-[#2a3644]"> MÁS?</span>
-          </h2>
-          <p className="text-md text-muted-foreground text-center mb-3 font-lora">
-            Explora más proyectos y contribuciones en mi perfil de GitHub.
-          </p>
+          ) : null}
           <a
-            href="https://github.com/KevinDiazz"
+            href={project.repo}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#2a3644] font-medium hover:text-[#d9376e] font-lora"
+            className={`flex items-center gap-1.5 rounded-sm px-5 py-2 font-manrope text-sm transition
+              ${
+                project.demo
+                  ? "border border-[#1a1a1a] text-[#1a1a1a] hover:border-[#1e3a5f] hover:text-[#1e3a5f]"
+                  : "bg-[#1a1a1a] text-white hover:bg-[#1e3a5f]"
+              }`}
           >
-            <div className="flex flex-col items-center  gap-2">
-              <img
-                className="w-16 rounded-full"
-                src="\assets\icons8-github-96.png"
-                alt=""
-              />
-              Visitar GitHub
-            </div>
+            <Github size={14} />
+            Repositorio
           </a>
         </div>
-        <Card className="w-80 flex justify-between order-6 bg-[#fdf6ef] transition duration-300 ease-in-out transform rounded-xl hover:border-[#d95d39] hover:-translate-y-1">
-          <CardHeader>
-            <CardTitle className="font-manrope">GCleaning Services</CardTitle>
-            <CardDescription className="h-28 font-lora overflow-hidden">
-              Sitio web corporativo desarrollado en WordPress para una empresa
-              de limpieza. Construido sobre el tema Astra, adaptada mediante
-              ajustes de diseño y Optimizado para SEO local.
-            </CardDescription>
-                    <div className="flex flex-col items-center gap-2">
-      <div className="flex w-full flex-wrap gap-2">
-        <Badge className="bg-white text-[#fea564]">WordPress</Badge>
       </div>
-    </div>
-          </CardHeader>
+    </Card>
+  );
+}
 
-          <CardContent className="overflow-hidden">
-            <img
-              className="w-full h-48 scale-135 object-cover object-top"
-              src="\assets\Captura de pantalla 2026-01-03 142843.png"
-              alt="Vista previa del proyecto Own Route"
-            />
-          </CardContent>
+function Projects() {
+  return (
+    <section id="proyectos" className="px-4 pt-4">
+      <div className="flex justify-center lg:justify-start mb-6">
+        <p className="font-lora font-semibold tracking-tight text-[#1a1a1a] text-4xl relative inline-block pb-2">
+          Proyectos
+          <span className="absolute bottom-0 left-0 h-[3px] w-10 bg-[#1e3a5f]" />
+        </p>
+      </div>
 
-          <CardFooter className="flex gap-2 justify-between items-end">
-            <a
-              href="https://gcleaning.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="font-lora p-5 text-md text-black bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-                <img
-                  className="w-4 object-contain"
-                  src="/assets/enlace.png"
-                  alt="Icono de enlace"
-                />
-                Ver sitio
-              </Button>
-            </a>
+      {PROJECTS.map((project) => (
+        <ProjectCard key={project.title} project={project} />
+      ))}
 
-            <a
-              href="https://ownroute.life/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="w-24 p-5 text-black font-lora bg-[#ff8e3c] hover:bg-[#fea564] hover:shadow-black/25 hover:cursor-pointer flex items-center gap-2">
-                <img
-                  className="w-6 rounded-full object-contain"
-                  src="/assets/icons8-github-96.png"
-                  alt="Icono de GitHub"
-                />
-                Docs
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
+      <div className="max-w-5xl mx-auto flex flex-col gap-2 items-start border border-dashed border-[#e2e0da] rounded-sm p-6">
+        <p className="font-lora text-2xl text-[#1a1a1a]">¿Quieres ver más?</p>
+        <p className="text-sm text-[#6b6a67] font-lora">
+          Explora más proyectos y contribuciones en mi perfil de GitHub.
+        </p>
+        <a
+          href="https://github.com/KevinDiazz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 text-[#1a1a1a] font-manrope text-sm border-b border-[#1a1a1a] hover:text-[#1e3a5f] hover:border-[#1e3a5f]"
+        >
+          Visitar GitHub
+          <ArrowUpRight size={14} />
+        </a>
       </div>
     </section>
   );

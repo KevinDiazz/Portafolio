@@ -9,15 +9,16 @@ import { Separator } from "@/components/ui/separator";
 import Footer from "./components/footer";
 function App() {
   return (
-    <div className="min-h-screen bg-[#fff8f2]">
+    <div className="min-h-screen bg-[#fdfcfb]">
       <div className="max-w-6xl mx-auto">
         <Header></Header>
         <main>
         <AboutMe></AboutMe>
+        <Separator className="mt-5 bg-[#e2e0da]"></Separator>
         <Stack></Stack>
-        <Separator className="mt-5 bg-[#ff8e3c]"></Separator>
+        <Separator className="mt-8 bg-[#e2e0da]"></Separator>
         <Projects></Projects>
-        <Separator className="mt-5 bg-[#ff8e3c]"></Separator>
+        <Separator className="mt-5 bg-[#e2e0da]"></Separator>
         <Contacto></Contacto>
         </main>
         <Footer></Footer>
