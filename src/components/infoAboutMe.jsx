@@ -28,9 +28,9 @@ function AboutMe() {
         <p className="max-w-xl mt-5 text-[#3f3f3f] leading-relaxed">
           <span className="font-semibold text-[#1a1a1a]">Desarrollador Full Stack</span>, con
           sólida comprensión de lógica de programación, estructuras de datos y arquitectura de
-          software. Me adapto con facilidad a distintas herramientas y tecnologías y utilizo la
-          IA como apoyo durante el desarrollo, siguiendo un proceso estructurado de análisis,
-          generación, revisión, pruebas y validación antes de implementar cualquier solución.
+          software. Me adapto con facilidad a distintas herramientas y tecnologías, utilizando la
+  IA como apoyo durante el desarrollo mediante un proceso estructurado de análisis,
+  generación, revisión, pruebas y validación antes de implementar cualquier solución.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mt-6 xl:justify-start">
