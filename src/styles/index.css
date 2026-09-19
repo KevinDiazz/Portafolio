@@ -45,6 +45,16 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --font-manrope:"Manrope",sans-serif;
   --font-lora:"Lora",serif;
+
+  /* Paleta de marca — un único punto de cambio para todo el sitio */
+  --color-paper: #f4f6f9;      /* fondo general de la página */
+  --color-surface: #faf9f7;    /* fondo de paneles/imágenes sobre el paper */
+  --color-ink: #1a1a1a;        /* texto principal, botones sólidos */
+  --color-body: #3f3f3f;       /* texto de párrafo */
+  --color-muted: #6b6a67;      /* texto secundario/metadatos */
+  --color-line: #e2e0da;       /* bordes y separadores */
+  --color-accent: #1e3a5f;     /* azul de marca: links, iconos, énfasis */
+  --color-accent-soft: #e8eef4; /* fondo suave del acento (badges, chips) */
 }
 
 :root {

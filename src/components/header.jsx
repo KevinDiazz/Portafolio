@@ -44,15 +44,15 @@ function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-[#fdfcfb]/95 backdrop-blur-sm border-b transition-shadow duration-300
-        ${scrolled ? "border-[#e2e0da] shadow-sm" : "border-transparent"}`}
+      className={`sticky top-0 z-50 w-full bg-paper/95 backdrop-blur-sm border-b transition-shadow duration-300
+        ${scrolled ? "border-line shadow-sm" : "border-transparent"}`}
     >
       <nav className="flex items-center justify-between px-5 py-4 sm:px-8">
         <button
           onClick={() => handleClick("SobreMi")}
-          className="font-lora font-semibold text-lg text-[#1a1a1a] tracking-tight cursor-pointer"
+          className="font-lora font-semibold text-lg text-ink tracking-tight cursor-pointer"
         >
-          Kevin Díaz<span className="text-[#1e3a5f]">.</span>
+          Kevin Díaz<span className="text-accent">.</span>
         </button>
 
         <div className="hidden sm:flex items-center gap-8">
@@ -63,8 +63,8 @@ function Header() {
               className={`font-manrope text-sm tracking-wide transition-colors duration-300 cursor-pointer border-b pb-0.5
                 ${
                   activeSection === link.id
-                    ? "text-[#1e3a5f] border-[#1e3a5f]"
-                    : "text-[#44403c] border-transparent hover:text-[#1e3a5f]"
+                    ? "text-accent border-accent"
+                    : "text-body border-transparent hover:text-accent"
                 }`}
             >
               {link.label}
@@ -73,7 +73,7 @@ function Header() {
         </div>
 
         <button
-          className="sm:hidden text-[#1a1a1a]"
+          className="sm:hidden text-ink"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Abrir menú"
         >
@@ -82,12 +82,12 @@ function Header() {
       </nav>
 
       {menuOpen && (
-        <div className="flex flex-col items-center gap-4 pb-5 sm:hidden border-t border-[#e2e0da] pt-4">
+        <div className="flex flex-col items-center gap-4 pb-5 sm:hidden border-t border-line pt-4">
           {LINKS.map((link) => (
             <button
               key={link.id}
               onClick={() => handleClick(link.id)}
-              className="font-manrope text-sm text-[#1a1a1a]"
+              className="font-manrope text-sm text-ink"
             >
               {link.label}
             </button>

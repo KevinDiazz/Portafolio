@@ -1,24 +1,44 @@
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
-const Dot = () => <span className="mt-2 block h-1 w-1 shrink-0 rounded-full bg-[#1e3a5f]" />;
+const Dot = () => <span className="mt-2 block h-1 w-1 shrink-0 rounded-full bg-accent" />;
 
 const PROJECTS = [
   {
-    title: "PideON",
-    tagline: "Del cliente al repartidor: el ciclo completo de un pedido, en producción.",
+    title: "CarRent",
+    tagline: "Reserva de vehículos con gestor CRM para el administrador.",
     description:
-      "Plataforma full-stack de pedidos para restaurantes que cubre los cuatro roles del flujo: cliente, cocina, repartidor y administrador.",
+      "Plataforma de alquiler de vehículos con backend en Spring Boot y frontend en Angular, incluyendo un panel de administración tipo CRM.",
     features: [
-      "Autenticación JWT con control de acceso por rol",
-      "Checkout con dirección de entrega a domicilio o recogida en tienda",
-      "Panel de cocina con transición de estado de pedidos en un click",
+      "Autenticación JWT y autorización por roles (usuario/admin) con Spring Security",
+      "Modelado de entidades con JPA/Hibernate siguiendo el patrón MVC",
+      "Panel de administración con rutas protegidas por rol (route guards)",
+      "Gestión de vehículos, oficinas y reservas con formularios reactivos y validaciones de dominio",
+      "Arquitectura frontend por features con standalone components y Signals",
+      "Testing de componentes con Vitest y de servicios backend con JUnit 5 + Mockito",
+    ],
+    badges: ["Angular", "Spring Boot", "Spring Security", "JPA/Hibernate", "Tailwind CSS", "JUnit 5 + Mockito"],
+    demo: "https://carrent-frontend.vercel.app",
+    repo: "https://github.com/KevinDiazz/carrent-frontend",
+    monogram: "CR",
+    image: "/assets/Captura de pantalla-carrent.png",
+    featured: true,
+  },
+  {
+    title: "PideON",
+    tagline: "Pide, cocina, entrega: una app de pedidos a domicilio, en producción.",
+    description:
+      "Plataforma de pedidos para restaurantes con un panel propio para cada rol del negocio, desplegada y funcionando en producción.",
+    features: [
+      "Backend por capas (controller-service-repository) con autenticación JWT y roles: cliente, cocina, repartidor y admin",
+      "Cocina y repartidor gestionan el estado del pedido en tiempo real; admin controla el negocio completo",
       "Autoasignación atómica de repartos para evitar conflictos entre repartidores",
+      "Frontend con gestión de estado combinando TanStack Query (server-state) y Zustand (client-state)",
       "Panel de admin con CRUD de categorías/productos y subida de imágenes a Cloudinary",
       "Facturación simplificada descargable en PDF",
-      "Backend cubierto con tests de integración (Jest + Supertest)",
+      "Backend cubierto con tests unitarios e integración (Jest + Supertest)",
     ],
-    badges: ["React", "Node.js", "Express", "Prisma", "PostgreSQL", "JWT", "Jest + Supertest"],
+    badges: ["React", "Node.js", "Express", "Prisma", "PostgreSQL", "TanStack Query", "Zustand", "Jest + Supertest"],
     demo: "https://pideon.vercel.app",
     repo: "https://github.com/KevinDiazz/pideon",
     monogram: "PN",
@@ -27,16 +47,15 @@ const PROJECTS = [
   },
   {
     title: "CanaryRoutes",
-    tagline: "Turismo por Canarias sin depender de Google Travel ni GetYourGuide.",
+    tagline: "Guía de turismo en Canarias, con mapa y contenido en tres idiomas.",
     description:
-      "Plataforma editorial de turismo centrada exclusivamente en Canarias, con mapa interactivo y contenido optimizado para SEO.",
+      "Web de turismo dedicada solo a Canarias, con mapa interactivo de sitios de interés y contenido pensado para buscadores.",
     features: [
-      "Mapa interactivo con clustering y filtros por categoría",
-      "Más de 190 puntos de interés con datos enriquecidos (dificultad, duración, coordenadas)",
-      "Guías editoriales en tres idiomas (español, inglés, alemán)",
-      "Slugs localizados y hreflang para SEO multi-idioma",
-      "Integración de afiliados (GetYourGuide, DiscoverCars)",
-      "Consentimiento de cookies y cumplimiento GDPR",
+      "Mapa interactivo con filtros por categoría",
+      "Más de 190 sitios con detalles como dificultad y duración",
+      "Contenido en español, inglés y alemán",
+      "Optimizada para SEO multi-idioma",
+      "Enlaces de afiliados para reservar actividades y coches",
     ],
     badges: ["Next.js 15", "TypeScript", "Tailwind", "Framer Motion"],
     demo: "https://canary-routes.com",
@@ -44,102 +63,65 @@ const PROJECTS = [
     monogram: "CR",
     image: "/assets/canaryroutes.png",
   },
-  {
-    title: "FootballScout",
-    tagline: "Ligas, equipos y jugadores en tiempo real con Angular moderno.",
-    description:
-      "Proyecto de aprendizaje que explora patrones avanzados de Angular 22 consumiendo la API pública de TheSportsDB.",
-    features: [
-      "Exploración de ligas, equipos y jugadores en tiempo real",
-      "Búsqueda en tiempo real de ligas y equipos",
-      "Favoritos persistentes con localStorage",
-      "Gestión de estado con Signals y arquitectura standalone",
-      "Orquestación de peticiones HTTP con forkJoin",
-      "Manejo de errores y estados de carga con reintento",
-    ],
-    badges: ["Angular 22", "TypeScript", "Vitest", "RxJS"],
-    demo: null,
-    repo: "https://github.com/KevinDiazz/footballScout",
-    monogram: "FS",
-    image: "/assets/footballScout.png",
-  },
-  {
-    title: "Angular CRM Comercial",
-    tagline: "CRUD de clientes y dashboard de métricas con formularios reactivos.",
-    description:
-      "CRM de aprendizaje con gestión completa de clientes y arquitectura basada en componentes reutilizables.",
-    features: [
-      "CRUD completo de clientes (crear, ver, editar, eliminar)",
-      "Dashboard con métricas: clientes totales, leads, contactos, propuestas y perdidos",
-      "Formularios reactivos con validación (email, DNI, teléfono)",
-      "Feedback visual en tiempo real ante cambios de estado",
-      "Comunicación entre componentes y reutilización de UI",
-    ],
-    badges: ["Angular", "TypeScript", "Vitest", "RxJS"],
-    demo: null,
-    repo: "https://github.com/KevinDiazz/angular-crm-comercial",
-    monogram: "CRM",
-    image: "/assets/angularCrm.png",
-  },
 ];
 
 function ProjectCard({ project }) {
   return (
     <Card
-      className={`w-full max-w-5xl mx-auto flex-row flex-wrap md:flex-nowrap overflow-hidden bg-white rounded-sm border border-[#e2e0da] mb-8 py-0 gap-0
-        ${project.featured ? "border-t-2 border-t-[#1e3a5f]" : ""}`}
+      className={`w-full max-w-3xl mx-auto flex-col overflow-hidden bg-white rounded-sm border border-line mb-6 py-0 gap-0 shadow-sm transition-shadow duration-300 hover:shadow-md
+        ${project.featured ? "border-t-2 border-t-accent" : ""}`}
     >
-      <div className="w-full md:w-2/5 min-h-48 flex items-center justify-center overflow-hidden bg-[#faf9f7] border-b md:border-b-0 md:border-r border-[#e2e0da]">
+      <div className="w-full aspect-[21/9] flex items-center justify-center overflow-hidden bg-surface border-b border-line">
         {project.image ? (
           <img
-            className="w-full h-full min-h-48 object-cover"
+            className="w-full h-full object-contain"
             src={project.image}
             alt={`Captura del proyecto ${project.title}`}
           />
         ) : (
-          <span className="font-lora text-6xl text-[#1e3a5f]/30">{project.monogram}</span>
+          <span className="font-lora text-5xl text-accent/30">{project.monogram}</span>
         )}
       </div>
-      <div className="flex-1 p-6 flex flex-col">
+      <div className="flex-1 p-4 flex flex-col">
         {project.featured && (
-          <span className="w-fit mb-2 font-manrope text-[11px] uppercase tracking-[0.15em] text-[#1e3a5f]">
+          <span className="w-fit mb-1 font-manrope text-[10px] uppercase tracking-[0.15em] text-accent">
             Proyecto destacado
           </span>
         )}
-        <CardTitle className="font-lora text-2xl font-semibold text-[#1a1a1a]">
+        <CardTitle className="font-lora text-xl font-semibold text-ink">
           {project.title}
         </CardTitle>
-        <p className="font-lora italic text-[#3f3f3f] mt-1">{project.tagline}</p>
-        <CardDescription className="font-lora mt-2 text-[#3f3f3f]">
+        <p className="font-lora italic text-sm text-body mt-1">{project.tagline}</p>
+        <CardDescription className="font-lora mt-1.5 text-sm text-body">
           {project.description}
         </CardDescription>
-        <ul className="mt-3 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+        <ul className="mt-2 flex flex-col gap-1">
           {project.features.map((feature) => (
-            <li key={feature} className="flex gap-2 font-lora text-sm text-[#3f3f3f]">
+            <li key={feature} className="flex gap-2 pl-1 font-lora text-xs text-body">
               <Dot />
               <span>{feature}</span>
             </li>
           ))}
         </ul>
-        <div className="flex w-full flex-wrap gap-2 mt-4">
+        <div className="flex w-full flex-wrap gap-1.5 mt-3">
           {project.badges.map((b) => (
             <span
               key={b}
-              className="rounded-sm border border-[#1e3a5f]/15 bg-[#e8eef4]/50 px-2 py-0.5 font-manrope text-[11px] text-[#1e3a5f]"
+              className="rounded-sm border border-accent/15 bg-accent-soft/50 px-2 py-0.5 font-manrope text-[10px] text-accent"
             >
               {b}
             </span>
           ))}
         </div>
-        <div className="flex gap-3 mt-5">
+        <div className="flex gap-2 mt-4">
           {project.demo ? (
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-sm bg-[#1a1a1a] px-5 py-2 font-manrope text-sm text-white transition hover:bg-[#1e3a5f]"
+              className="flex items-center gap-1.5 rounded-sm bg-ink px-4 py-1.5 font-manrope text-xs text-white transition-colors duration-300 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
             >
-              <ExternalLink size={14} />
+              <ExternalLink size={13} />
               Ver demo
             </a>
           ) : null}
@@ -147,14 +129,14 @@ function ProjectCard({ project }) {
             href={project.repo}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-1.5 rounded-sm px-5 py-2 font-manrope text-sm transition
+            className={`flex items-center gap-1.5 rounded-sm px-4 py-1.5 font-manrope text-xs transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2
               ${
                 project.demo
-                  ? "border border-[#1a1a1a] text-[#1a1a1a] hover:border-[#1e3a5f] hover:text-[#1e3a5f]"
-                  : "bg-[#1a1a1a] text-white hover:bg-[#1e3a5f]"
+                  ? "border border-ink text-ink hover:border-accent hover:text-accent"
+                  : "bg-ink text-white hover:bg-accent"
               }`}
           >
-            <Github size={14} />
+            <Github size={13} />
             Repositorio
           </a>
         </div>
@@ -167,9 +149,9 @@ function Projects() {
   return (
     <section id="proyectos" className="px-4 pt-4">
       <div className="flex justify-center lg:justify-start mb-6">
-        <p className="font-lora font-semibold tracking-tight text-[#1a1a1a] text-4xl relative inline-block pb-2">
+        <p className="font-lora font-semibold tracking-tight text-ink text-4xl relative inline-block pb-2">
           Proyectos
-          <span className="absolute bottom-0 left-0 h-[3px] w-10 bg-[#1e3a5f]" />
+          <span className="absolute bottom-0 left-0 h-[3px] w-10 bg-accent" />
         </p>
       </div>
 
@@ -177,16 +159,16 @@ function Projects() {
         <ProjectCard key={project.title} project={project} />
       ))}
 
-      <div className="max-w-5xl mx-auto flex flex-col gap-2 items-start border border-dashed border-[#e2e0da] rounded-sm p-6">
-        <p className="font-lora text-2xl text-[#1a1a1a]">¿Quieres ver más?</p>
-        <p className="text-sm text-[#6b6a67] font-lora">
+      <div className="max-w-5xl mx-auto flex flex-col gap-2 items-start border border-dashed border-line rounded-sm p-6">
+        <p className="font-lora text-2xl text-ink">¿Quieres ver más?</p>
+        <p className="text-sm text-muted font-lora">
           Explora más proyectos y contribuciones en mi perfil de GitHub.
         </p>
         <a
           href="https://github.com/KevinDiazz"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-[#1a1a1a] font-manrope text-sm border-b border-[#1a1a1a] hover:text-[#1e3a5f] hover:border-[#1e3a5f]"
+          className="flex items-center gap-1 text-ink font-manrope text-sm border-b border-ink hover:text-accent hover:border-accent"
         >
           Visitar GitHub
           <ArrowUpRight size={14} />

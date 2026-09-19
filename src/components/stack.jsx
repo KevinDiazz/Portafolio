@@ -11,7 +11,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { TestTube2 } from "lucide-react";
 
-const Dot = () => <span className="mt-2 block h-1 w-1 shrink-0 rounded-full bg-[#1e3a5f]" />;
+const Dot = () => <span className="mt-2 block h-1 w-1 shrink-0 rounded-full bg-accent" />;
 
 const SKILLS = [
   {
@@ -20,12 +20,12 @@ const SKILLS = [
     icon: "/assets/react.svg",
     group: "Frontend",
     description:
-      "Con React creo interfaces que combinan eficiencia y flexibilidad, usando componentes modulares para experiencias digitales intuitivas y escalables.",
+      "Con React construí la interfaz de PideON (pedidos con paneles diferenciados por rol) y las páginas de CanaryRoutes sobre Next.js.",
     points: [
-      "Uso avanzado de hooks (useState, useEffect, useContext...)",
-      "Gestión de estado con Redux y Context API",
-      "Manejo de rutas con React Router",
-      "Testing con Vitest y React Testing Library",
+      "Hooks y componentes funcionales para UI modular",
+      "Enrutamiento con React Router (PideON) y App Router (CanaryRoutes)",
+      "Gestión de estado combinando TanStack Query (server-state) y Zustand (client-state)",
+      "Consumo de API REST con Axios y manejo de estados de carga/error",
     ],
   },
   {
@@ -34,12 +34,12 @@ const SKILLS = [
     icon: "/assets/icons8-angular-48.png",
     group: "Frontend",
     description:
-      "Con Angular construyo aplicaciones estructuradas y mantenibles, aprovechando su enfoque opinado y su integración nativa con TypeScript.",
+      "Con Angular construí CarRent: una SPA de reserva de vehículos con panel de administración, usando el enfoque moderno de Angular 22 sin NgModules.",
     points: [
       "Standalone components y arquitectura por features",
-      "Signals y RxJS para estado y programación reactiva",
-      "Formularios reactivos con validación",
-      "Testing de componentes con Vitest",
+      "Gestión de estado con Signals, sin librerías externas",
+      "Formularios reactivos con validaciones de dominio (matrícula, precios)",
+      "Rutas protegidas por rol con route guards en el panel admin",
     ],
   },
   {
@@ -48,12 +48,12 @@ const SKILLS = [
     icon: "/assets/javascript-logo-svgrepo-com.svg",
     group: "Frontend",
     description:
-      "JavaScript es el lenguaje base que utilizo para dar vida a las aplicaciones web, creando lógica robusta y eficiente para interfaces interactivas y dinámicas.",
+      "JavaScript es la base del backend de PideON (Node/Express) y de la lógica de cliente en mis proyectos con React.",
     points: [
-      "Dominio de ES6+ (arrow functions, destructuring, spread/rest, promesas, async/await)",
-      "Manipulación avanzada del DOM y eventos",
-      "Programación orientada a objetos y funcional",
-      "Consumo y manejo de APIs REST",
+      "ES6+: async/await, destructuring, módulos",
+      "Lógica de negocio en controladores y servicios Express",
+      "Manejo de promesas y control de errores asíncronos",
+      "Consumo y construcción de APIs REST",
     ],
   },
   {
@@ -62,12 +62,12 @@ const SKILLS = [
     icon: "/assets/icons8-typescript-48.png",
     group: "Frontend",
     description:
-      "Añado tipado estático a mis proyectos para detectar errores antes de tiempo de ejecución y hacer el código más mantenible y autodocumentado.",
+      "Uso TypeScript en Angular (CarRent) y Next.js (CanaryRoutes) para tipar componentes, servicios y respuestas de la API.",
     points: [
-      "Interfaces, tipos genéricos y utility types",
-      "Tipado de props, hooks y contextos en React",
-      "Configuración de tsconfig y modo estricto",
-      "Uso en proyectos Angular y Next.js",
+      "Tipado de modelos y DTOs consumidos desde el backend",
+      "Interfaces y tipos genéricos en servicios Angular",
+      "Configuración de tsconfig en modo estricto",
+      "Props y componentes tipados en Next.js",
     ],
   },
   {
@@ -76,12 +76,12 @@ const SKILLS = [
     icon: "/assets/html-svgrepo-com.svg",
     group: "Frontend",
     description:
-      "Estructuro contenido web accesible y semántico, asegurando una base sólida para cualquier proyecto front-end.",
+      "Estructuro cada interfaz de forma semántica y accesible, desde formularios de reserva hasta paneles de administración.",
     points: [
-      "Uso correcto de etiquetas semánticas para mejorar accesibilidad y SEO",
-      "Estructuración limpia y organizada del contenido",
-      "Formularios accesibles y validación básica",
-      "Integración con CSS y JavaScript para interfaces dinámicas",
+      "Etiquetas semánticas para accesibilidad y SEO",
+      "Formularios accesibles con validación nativa",
+      "Estructuración clara del contenido por secciones",
+      "Integración con componentes dinámicos de Angular/React",
     ],
   },
   {
@@ -90,12 +90,12 @@ const SKILLS = [
     icon: "/assets/css3-logo-svgrepo-com.svg",
     group: "Frontend",
     description:
-      "Diseño interfaces atractivas, responsivas y eficientes, asegurando que se adapten y funcionen bien en cualquier dispositivo.",
+      "Antes de aplicar Tailwind, maqueto la estructura con CSS: Flexbox y Grid para los layouts de mis proyectos.",
     points: [
-      "Uso avanzado de Flexbox y Grid para layouts modernos",
-      "Diseño responsivo mobile-first",
-      "Manejo de preprocesadores como SASS",
-      "Transiciones y animaciones para experiencias visuales fluidas",
+      "Flexbox y Grid para layouts responsivos",
+      "Diseño mobile-first",
+      "Transiciones y estados hover/focus",
+      "Variables CSS para temas de color consistentes",
     ],
   },
   {
@@ -104,12 +104,12 @@ const SKILLS = [
     icon: "/assets/tailwind-svgrepo-com.svg",
     group: "Frontend",
     description:
-      "Utilizo Tailwind para construir estilos rápidos y consistentes, creando diseños responsivos y personalizados sin salir del flujo de trabajo.",
+      "Tailwind es el framework de estilos que uso en todos mis proyectos: CarRent, PideON, CanaryRoutes y este portafolio.",
     points: [
-      "Diseño basado en utilidades que agilizan el desarrollo",
-      "Layouts flexibles con clases de Flexbox y Grid integradas",
-      "Personalización mediante configuración y plugins",
-      "Componentes reutilizables con shadcn/ui",
+      "Diseño mobile-first en los cuatro proyectos",
+      "Sistema de color y espaciado consistente por proyecto",
+      "Componentes reutilizables con shadcn/ui (este portafolio)",
+      "Configuración y extensión del tema (tailwind.config)",
     ],
   },
   {
@@ -118,12 +118,12 @@ const SKILLS = [
     icon: "/assets/icons8-node-js-48.png",
     group: "Backend",
     description:
-      "Construyo APIs con Node.js pensadas para escalar: capa de rutas, controladores y servicios bien separados, con manejo de errores centralizado.",
+      "Con Node.js construí la API REST de PideON: capas de rutas, controladores, servicios y repositorios.",
     points: [
-      "APIs REST con autenticación JWT y control de roles",
-      "Arquitectura por capas (rutas, controladores, servicios)",
-      "Manejo de errores y middlewares centralizados",
-      "Variables de entorno y despliegue en Render",
+      "Arquitectura por capas (controller-service-repository)",
+      "Autenticación JWT y roles: cliente, cocina, repartidor, admin",
+      "Subida de imágenes con Multer + Cloudinary",
+      "Despliegue en Render con variables de entorno",
     ],
   },
   {
@@ -132,12 +132,12 @@ const SKILLS = [
     icon: "/assets/icons8-express-js-50.png",
     group: "Backend",
     description:
-      "Express es mi framework de referencia para levantar APIs rápido, con middlewares propios para auth, validación y CORS entre entornos.",
+      "Express expone los endpoints de PideON, con middlewares propios de autenticación, autorización y validación.",
     points: [
-      "Middlewares de autenticación y autorización por rol",
-      "Validación de datos de entrada",
-      "CORS configurado para local, Vercel y Render",
-      "Endpoints CRUD documentados y consistentes",
+      "Middlewares de autenticación (JWT) y autorización por rol",
+      "Validación de entrada con express-validator",
+      "CORS configurado para entornos local, Vercel y Render",
+      "Generación de facturas en PDF en streaming con PDFKit",
     ],
   },
   {
@@ -146,12 +146,12 @@ const SKILLS = [
     icon: "/assets/icons8-java-48.png",
     group: "Backend",
     description:
-      "Java es una de las bases de mi formación en el ciclo de DAW: programación orientada a objetos sólida y buenas prácticas de diseño de software.",
+      "Java es la base de CarRent: programación orientada a objetos aplicada a un backend Spring Boot en capas.",
     points: [
-      "Programación orientada a objetos (herencia, interfaces, polimorfismo)",
-      "Colecciones, streams y programación funcional en Java 8+",
-      "Persistencia con JDBC/JPA",
-      "Buenas prácticas y patrones de diseño",
+      "POO aplicada a entidades, servicios y controladores",
+      "Colecciones y Streams en la lógica de disponibilidad de coches",
+      "Persistencia con JPA/Hibernate",
+      "Patrón DTO con mapeo automático vía MapStruct",
     ],
   },
   {
@@ -160,12 +160,12 @@ const SKILLS = [
     icon: "/assets/icons8-spring-boot-48.png",
     group: "Backend",
     description:
-      "Con Spring Boot construyo APIs REST en Java de forma estructurada, aprovechando inyección de dependencias y su ecosistema para persistencia y seguridad.",
+      "Con Spring Boot construí la API REST de CarRent: autenticación JWT, roles con Spring Security y persistencia con Spring Data JPA.",
     points: [
-      "APIs REST con Spring Boot y Spring MVC",
-      "Inyección de dependencias e inversión de control",
-      "Persistencia con Spring Data JPA / Hibernate",
-      "Seguridad y autenticación con Spring Security",
+      "Arquitectura MVC con controladores, servicios y repositorios",
+      "Autenticación JWT y autorización por roles con Spring Security",
+      "Persistencia con Spring Data JPA/Hibernate sobre MySQL",
+      "DTOs y mapeo de entidades con MapStruct",
     ],
   },
   {
@@ -174,12 +174,12 @@ const SKILLS = [
     icon: "/assets/icons8-prisma-orm-50.png",
     group: "Backend",
     description:
-      "Modelo mis bases de datos con Prisma: schemas claros, migraciones versionadas y queries tipadas de extremo a extremo.",
+      "Modelé la base de datos de PideON con Prisma: 9 entidades relacionadas (usuarios, pedidos, productos, pagos) sobre PostgreSQL.",
     points: [
-      "Modelado de esquemas y relaciones (1:N, N:N)",
-      "Migraciones versionadas y generación automática del cliente",
-      "Queries tipadas y transacciones atómicas",
-      "Seed de datos para entornos de desarrollo",
+      "Modelado de esquemas y relaciones 1:N",
+      "Migraciones versionadas",
+      "Queries tipadas de extremo a extremo",
+      "Generación automática del cliente (prisma generate)",
     ],
   },
   {
@@ -188,12 +188,12 @@ const SKILLS = [
     icon: "/assets/icons8-postgresql-48.png",
     group: "Backend",
     description:
-      "Diseño el modelo relacional pensando en integridad y rendimiento, usando PostgreSQL en producción sobre Neon.",
+      "PostgreSQL es la base de datos de PideON en producción, gestionada con Neon (serverless) e integrada vía Prisma.",
     points: [
-      "Diseño de esquemas relacionales normalizados",
-      "Índices y constraints para integridad de datos",
-      "Consultas optimizadas para operaciones concurrentes",
-      "Backups y entornos gestionados con Neon",
+      "Diseño de esquema relacional (usuarios, pedidos, pagos, cupones)",
+      "Actualización condicionada para evitar condiciones de carrera en la autoasignación de repartos",
+      "Despliegue gestionado con Neon",
+      "Migraciones aplicadas en el pipeline de despliegue (Render)",
     ],
   },
   {
@@ -203,12 +203,12 @@ const SKILLS = [
     Icon: TestTube2,
     group: "Backend",
     description:
-      "Escribo tests para no romper lo que ya funciona: desde componentes en el frontend hasta endpoints completos en el backend.",
+      "Escribo tests en cada backend que construyo: JUnit 5 + Mockito en CarRent, y Jest + Supertest en PideON.",
     points: [
-      "Tests de integración de la API con Jest y Supertest",
-      "Tests de componentes con Vitest y React Testing Library",
-      "Casos de autenticación, roles y flujos de error",
-      "Tests como parte del flujo antes de desplegar",
+      "Tests unitarios de servicios con mocks (Mockito) en CarRent",
+      "Tests de integración con Supertest sobre endpoints reales en PideON",
+      "Casos de autenticación, roles y errores de negocio",
+      "Tests de componentes con Vitest en Angular",
     ],
   },
 ];
@@ -218,14 +218,14 @@ function SkillTab({ skill, isActive }) {
     <TabsTrigger
       value={skill.id}
       title={skill.name}
-      className={`hover:cursor-pointer border transition-colors duration-200
-        ${isActive ? "border-[#1e3a5f] bg-[#e8eef4]" : "border-transparent data-[state=inactive]:bg-transparent"}`}
+      className={`hover:cursor-pointer border transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent
+        ${isActive ? "border-accent bg-accent-soft" : "border-transparent data-[state=inactive]:bg-transparent"}`}
     >
       {skill.icon ? (
         <img className={`w-6 transition-all ${isActive ? "" : "opacity-50 grayscale"}`} src={skill.icon} />
       ) : (
         <skill.Icon
-          className={`w-6 h-6 transition-colors ${isActive ? "text-[#1e3a5f]" : "text-[#8a8782]"}`}
+          className={`w-6 h-6 transition-colors ${isActive ? "text-accent" : "text-muted"}`}
         />
       )}
     </TabsTrigger>
@@ -239,10 +239,10 @@ function StackGroup({ title, skills, activeTab, setActiveTab }) {
       className="w-full items-center"
       onValueChange={setActiveTab}
     >
-      <p className="w-full font-manrope text-xs font-semibold text-[#1e3a5f] uppercase tracking-[0.15em] mb-2">
+      <p className="w-full font-manrope text-xs font-semibold text-accent uppercase tracking-[0.15em] mb-2">
         {title}
       </p>
-      <TabsList className="h-auto z-10 bg-white border border-[#e2e0da] p-2 flex flex-wrap gap-1 w-full rounded-sm">
+      <TabsList className="h-auto z-10 bg-white border border-line p-2 flex flex-wrap gap-1 w-full rounded-sm">
         {skills.map((skill) => (
           <SkillTab key={skill.id} skill={skill} isActive={activeTab === skill.id} />
         ))}
@@ -250,17 +250,17 @@ function StackGroup({ title, skills, activeTab, setActiveTab }) {
 
       {skills.map((skill) => (
         <TabsContent key={skill.id} value={skill.id}>
-          <Card className="h-86 justify-start w-full p-3 bg-white border-[#e2e0da] rounded-sm">
+          <Card className="h-86 justify-start w-full p-3 bg-white border-line rounded-sm shadow-sm">
             <motion.div
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
             >
               <CardHeader>
-                <CardTitle className="font-lora font-semibold text-[#1a1a1a]">
+                <CardTitle className="font-lora font-semibold text-ink">
                   {skill.name}
                 </CardTitle>
-                <CardDescription className="mb-2 font-lora text-[#3f3f3f]">
+                <CardDescription className="mb-2 font-lora text-body">
                   {skill.description}
                 </CardDescription>
               </CardHeader>
@@ -269,7 +269,7 @@ function StackGroup({ title, skills, activeTab, setActiveTab }) {
                   {skill.points.map((point) => (
                     <li key={point} className="flex gap-2 mb-2">
                       <Dot />
-                      <span className="text-[#3f3f3f]">{point}</span>
+                      <span className="text-body">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -291,13 +291,13 @@ function Stack() {
   return (
     <section id="stack" className="pt-6">
       <div className="flex justify-center xl:justify-start px-4 mb-2">
-        <p className="font-lora font-semibold tracking-tight text-[#1a1a1a] text-4xl relative inline-block pb-2">
+        <p className="font-lora font-semibold tracking-tight text-ink text-4xl relative inline-block pb-2">
           Stack
-          <span className="absolute bottom-0 left-0 h-[3px] w-10 bg-[#1e3a5f]" />
+          <span className="absolute bottom-0 left-0 h-[3px] w-10 bg-accent" />
         </p>
       </div>
       <div className="flex justify-center xl:justify-start px-4">
-        <p className="text-sm mt-2 max-w-md font-lora text-[#6b6a67] text-center xl:text-start">
+        <p className="text-sm mt-2 max-w-md font-lora text-muted text-center xl:text-start">
           Haz <span className="italic">click</span> en cada tecnología para ver más
           detalles sobre mis conocimientos.
         </p>

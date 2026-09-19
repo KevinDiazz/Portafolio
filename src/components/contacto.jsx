@@ -22,12 +22,12 @@ function Contacto() {
   return (
     <section id="contacto" className="px-4 pb-8">
       <div className="flex justify-center xl:justify-start mt-3">
-        <p className="font-lora font-semibold tracking-tight text-4xl text-[#1a1a1a] relative inline-block pb-2">
+        <p className="font-lora font-semibold tracking-tight text-4xl text-ink relative inline-block pb-2">
           Contacto
-          <span className="absolute bottom-0 left-0 h-[3px] w-10 bg-[#1e3a5f]" />
+          <span className="absolute bottom-0 left-0 h-[3px] w-10 bg-accent" />
         </p>
       </div>
-      <p className="font-lora text-[#6b6a67] text-center xl:text-start mt-2 max-w-lg mx-auto xl:mx-0">
+      <p className="font-lora text-muted text-center xl:text-start mt-2 max-w-lg mx-auto xl:mx-0">
         ¿Tienes una oportunidad, un proyecto o simplemente quieres saludar? Escríbeme por
         cualquiera de estos canales.
       </p>
@@ -39,12 +39,12 @@ function Contacto() {
             href={channel.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 group"
+            className="flex flex-col items-center gap-2 group focus-visible:outline-none"
           >
-            <div className="flex items-center justify-center w-16 h-16 rounded-full border border-[#1e3a5f]/15 bg-[#e8eef4]/50 text-[#1e3a5f] transition duration-300 group-hover:border-[#1e3a5f] group-hover:bg-[#1e3a5f] group-hover:text-white group-hover:-translate-y-1">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full border border-accent/15 bg-accent-soft/50 text-accent shadow-sm transition-all duration-300 group-hover:border-accent group-hover:bg-accent group-hover:text-white group-hover:-translate-y-1 group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-accent group-focus-visible:ring-offset-2">
               <channel.Icon size={22} />
             </div>
-            <p className="text-[#3f3f3f] text-sm text-center font-medium font-lora">{channel.label}</p>
+            <p className="text-body text-sm text-center font-medium font-lora">{channel.label}</p>
           </a>
         ))}
       </div>
