@@ -18,7 +18,7 @@ const PROJECTS = [
       "Testing de componentes con Vitest y de servicios backend con JUnit 5 + Mockito",
     ],
     badges: ["Angular", "Spring Boot", "Spring Security", "JPA/Hibernate", "Tailwind CSS", "JUnit 5 + Mockito"],
-    demo: "https://carrent-frontend.vercel.app",
+    demo: "https://carrent-frontend-topaz.vercel.app/",
     repo: "https://github.com/KevinDiazz/carrent-frontend",
     monogram: "CR",
     image: "/assets/Captura de pantalla-carrent.png",
