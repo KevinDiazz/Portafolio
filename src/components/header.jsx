@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const LINKS = [
   { id: "stack", label: "Stack" },
@@ -70,6 +70,15 @@ function Header() {
               {link.label}
             </button>
           ))}
+          <a
+            href="/assets/Curriculum_Kevin_Diaz.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 rounded-sm border border-ink px-4 py-1.5 font-manrope text-sm text-ink transition-colors duration-300 hover:bg-ink hover:text-white"
+          >
+            <Download size={14} />
+            CV
+          </a>
         </div>
 
         <button
@@ -92,6 +101,15 @@ function Header() {
               {link.label}
             </button>
           ))}
+          <a
+            href="/assets/Curriculum_Kevin_Diaz.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 rounded-sm border border-ink px-4 py-1.5 font-manrope text-sm text-ink"
+          >
+            <Download size={14} />
+            Ver CV
+          </a>
         </div>
       )}
     </header>
